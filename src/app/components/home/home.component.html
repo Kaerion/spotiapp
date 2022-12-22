@@ -1,15 +1,2 @@
 <h1 class="display-6 m-5">Últimos estrenos</h1>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div *ngFor="let song of newSongs" class="col">
-    <div class="card h-100">
-      <img [src]=song.images[0].url class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{song.name}}</h5>
-        <span *ngFor="let artists of song.artists" class="badge rounded-pill text-bg-primary">{{artists.name}}</span>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">Fecha de estreno: {{song.release_date | date}}</small>
-      </div>
-    </div>
-  </div>
-</div>
+<app-cards [items]="newSongs"></app-cards>
