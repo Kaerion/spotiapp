@@ -13,7 +13,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${ query }`;
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQCXyLnvccAn3QaB0Grqh6e8Zxrktqay-9Dw9FTEEO-8xFN_MdZ6CN3Fud6syKjAp7vIM4RDLCz45Pt8BcNzHi7XF7j8l6Dkj01Htm-aUbVwlbtmKPY'
+      'Authorization': '' //Spotify no acepta peticiones post que no sea hagan desde un server (Backend), asi que para pruebas de front, poner el token aqui.
     });
 
     return this.http.get(url, {headers});
